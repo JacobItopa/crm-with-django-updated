@@ -30,6 +30,9 @@ INSTALLED_APPS = [
     # Third party apps
     'crispy_forms',
     "crispy_tailwind",
+    'tailwind',
+    "theme",
+    'django_browser_reload',
 
     # Local apps
     'leads',
@@ -44,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'djcrm.urls'
@@ -160,3 +164,7 @@ CRISPY_TEMPLATE_PACK = 'tailwind'
     #EMAIL_USE_TLS = True
     #EMAIL_PORT = env("EMAIL_PORT")
     #DEFAULT_FROM_EMAIL = env("DEFAULT_FROM_EMAIL")
+
+TAILWIND_APP_NAME = 'theme'
+
+NPM_BIN_PATH = r"C:\Users\Admin\Envs\test\npm.cmd"
